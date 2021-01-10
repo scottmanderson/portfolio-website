@@ -7,6 +7,8 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LanguageIcon from "@material-ui/icons/Language";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,10 +34,21 @@ const Project = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button
+          size="small"
+          color="primary"
+          variant="contained"
+          href={props.details.exampleLink}
+        >
           Demo
         </Button>
-        <Button size="small" color="primary">
+        <Button
+          size="small"
+          color="primary"
+          endIcon={<GitHubIcon />}
+          variant="outlined"
+          href={props.details.githubLink}
+        >
           Source Code
         </Button>
       </CardActions>

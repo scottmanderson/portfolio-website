@@ -3,17 +3,13 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Link from "../src/Link";
-import Copyright from "../src/Copyright";
-import Summary from "../src/components/Summary";
+import Main from "../src/components/Main";
 
 export default function Index() {
   return (
     <Container maxWidth="md">
       <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom align="center">
-          Scott Anderson
-        </Typography>
-        <Summary />
+        <Main />
       </Box>
     </Container>
   );

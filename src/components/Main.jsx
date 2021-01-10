@@ -1,12 +1,16 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, GridList } from "@material-ui/core";
 import Certifications from "./Certifications";
 import Projects from "./Projects";
-import Copyright from "../Copyright";
+import Personal from "./Personal";
+import Technologies from "./Technologies";
 
-const Summary = () => {
+const Main = () => {
   return (
     <Grid container direction="column" align="center" spacing={4}>
+      <Grid item>
+        <Personal />
+      </Grid>
       <Grid item>
         <Projects />
       </Grid>
@@ -14,10 +18,10 @@ const Summary = () => {
         <Certifications />
       </Grid>
       <Grid item>
-        <Copyright />
+        <Technologies />
       </Grid>
     </Grid>
   );
 };
 
-export default Summary;
+export default Main;

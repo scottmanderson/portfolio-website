@@ -31,14 +31,14 @@ const Certifications = () => {
       >
         <Grid item>
           <Image
-            src="/images/AWS-SolArchitect-Associate-2020.png"
+            src="/images/certs/AWS-SolArchitect-Associate-2020.png"
             height="250"
             width="250"
           />
         </Grid>
         <Grid item>
           <Image
-            src="/images/AWS-Developer-Associate-2020.png"
+            src="/images/certs/AWS-Developer-Associate-2020.png"
             height="250"
             width="250"
           />
