@@ -1,6 +1,15 @@
 import React from "react";
-import { Card, CardContent, Grid, Paper, Tab, Tabs } from "@material-ui/core";
-import { TabContext, TabPanel } from "@material-ui/lab";
+import {
+  Avatar,
+  Card,
+  CardContent,
+  Grid,
+  Paper,
+  Tab,
+  Tabs,
+  Typography,
+} from "@material-ui/core";
+import { TabContext, TabList, TabPanel } from "@material-ui/lab";
 import Image from "next/image";
 import Technology from "./Technology";
 
@@ -54,30 +63,36 @@ const Technologies = () => {
   const techImagePath = "/images/techs";
   const [selectedName, setSelectedName] = React.useState(techDetails[0].name);
 
-  const handleClick = (event) => {
-    setSelectedName(event.target.name);
+  const handleChange = (event, newValue) => {
+    setSelectedName(newValue);
   };
 
   return (
     <Paper>
-      <Grid direction="column" container>
-        <Grid item container direction="row" wrap="nowrap">
+      <TabContext value={selectedName}>
+        <TabList onChange={handleChange}>
           {techDetails.map((tech) => (
-            <Grid item style={{ display: "flex" }}>
-              <Technology
-                selected={tech.name === selectedName}
-                details={tech}
-                selectedName={selectedName}
-              />
-            </Grid>
+            <Tab
+              value={tech.name}
+              label={tech.name}
+              icon={
+                <Image
+                  alt={tech.name}
+                  src={"/images/techs" + tech.image}
+                  height="72"
+                  width="72"
+                />
+              }
+            />
           ))}
-        </Grid>
-        <Grid item>
-          <Card>
-            <CardContent></CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+        </TabList>
+        {techDetails.map((tech) => (
+          <TabPanel value={tech.name}>
+            <h4>{tech.name}</h4>
+            <Typography>{tech.comments}</Typography>
+          </TabPanel>
+        ))}
+      </TabContext>
     </Paper>
   );
 };

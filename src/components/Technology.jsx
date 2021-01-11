@@ -11,13 +11,7 @@ import Image from "next/image";
 const Technology = (props) => {
   return (
     <Button>
-      <Typography gutterBottom>
-        <Image
-          src={"/images/techs" + props.details.image}
-          height="72"
-          width="72"
-        />
-      </Typography>
+      <Typography gutterBottom></Typography>
     </Button>
   );
 };
