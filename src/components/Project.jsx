@@ -14,8 +14,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     overflow: "hidden",
+    marginTop: 20,
     paddingTop: 10,
-    backgroundColor: "whitesmoke",
+    backgroundColor: "mintcream",
     maxWidth: 400,
     display: "flex",
     flexDirection: "column",
@@ -28,10 +29,10 @@ const Project = (props) => {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography gutterBottom>
-          <h3>{props.details.name}</h3>
-          <p>{props.details.description}</p>
+        <Typography variant="h5" gutterBottom>
+          {props.details.name}
         </Typography>
+        <Typography variant="body1">{props.details.description}</Typography>
       </CardContent>
       <CardActions>
         <Button

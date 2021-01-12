@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
   Grid,
+  makeStyles,
   Paper,
   Tab,
   Tabs,
@@ -11,20 +12,34 @@ import {
 } from "@material-ui/core";
 import { TabContext, TabList, TabPanel } from "@material-ui/lab";
 import Image from "next/image";
-import Technology from "./Technology";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    overflow: "hidden",
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  Card: {
+    backgroundColor: "mintcream",
+    padding: 20,
+  },
+}));
 
 const techDetails = [
   {
     name: "React",
     image: "/React.png",
     comments:
-      "After trying out Angular, React, and Vue for simple app building, I decided to go with React",
+      "I wanted to use a frontend framework within the Minerva project to provide dynamic page interactions to the user.  " +
+      "In the past I have tried out Angular, React, and Vue for simple app building, and I decided to go with React as I preferred the one-way data binding approach.  " +
+      "Also, this website is built with Next.js, a static site generator for React which also has server side rendering capabilities (not presently in use here).",
   },
   {
     name: "Redux",
     image: "/Redux.png",
     comments:
-      'I had imagined I would used the modernized Context API in lieu of Redux given the high praise it has gotten since React introduced "hooks," but once I tried out the newer redux hooks I felt I got the best of both worlds.',
+      'I had imagined I would used the modernized Context API in lieu of Redux given the high praise it has gotten since React introduced "hooks." Before starting this project I checked the react-redux website and found they had released React hooks for Redux, and they seemed to me a better choice for a project I intend to steadily grow in complexity.',
   },
   {
     name: "Material-UI",
@@ -36,14 +51,14 @@ const techDetails = [
     name: "Python",
     image: "/Python.png",
     comments:
-      "I chose Python for the backend language for the Minerva project as I've used the language for more ad-hoc financial data analysis in the past.",
+      "I chose Python for the backend language for the Minerva project as I've used the language for more ad-hoc financial data analysis in the past, and the Flask library provides a simple, microservice-oriented web server.",
   },
 
   {
     name: "PostgreSQL",
     image: "/PostgreSQL.png",
     comments:
-      "I suppose any modern free relational database would have worked reasonably well for these purposes, but I already had familiarity with PostgreSQL command line tools.",
+      "I suppose any modern, free relational database would have worked reasonably well for these purposes, but I already had familiarity with PostgreSQL command line tools.",
   },
   {
     name: "Nodejs",
@@ -60,6 +75,8 @@ const techDetails = [
 ];
 
 const Technologies = () => {
+  const styles = useStyles();
+
   const techImagePath = "/images/techs";
   const [selectedName, setSelectedName] = React.useState(techDetails[0].name);
 
@@ -68,9 +85,12 @@ const Technologies = () => {
   };
 
   return (
-    <Paper>
+    <Paper className={styles.root}>
+      <Typography variant="h4" gutterBottom>
+        Technologies Used In Projects
+      </Typography>
       <TabContext value={selectedName}>
-        <TabList onChange={handleChange}>
+        <TabList centered onChange={handleChange}>
           {techDetails.map((tech) => (
             <Tab
               value={tech.name}
@@ -87,9 +107,13 @@ const Technologies = () => {
           ))}
         </TabList>
         {techDetails.map((tech) => (
-          <TabPanel value={tech.name}>
-            <h4>{tech.name}</h4>
-            <Typography>{tech.comments}</Typography>
+          <TabPanel value={tech.name} className={styles.TabPanel}>
+            <Card className={styles.Card}>
+              <Typography variant="h5" gutterBottom>
+                {tech.name}
+              </Typography>
+              <Typography variant="body1">{tech.comments}</Typography>
+            </Card>
           </TabPanel>
         ))}
       </TabContext>

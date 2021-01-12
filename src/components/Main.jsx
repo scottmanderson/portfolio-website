@@ -15,10 +15,10 @@ const Main = () => {
         <Projects />
       </Grid>
       <Grid item>
-        <Certifications />
+        <Technologies />
       </Grid>
       <Grid item>
-        <Technologies />
+        <Certifications />
       </Grid>
     </Grid>
   );

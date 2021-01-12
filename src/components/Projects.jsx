@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import { makeStyles, Grid, Paper } from "@material-ui/core";
+import { makeStyles, Grid, Paper, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,13 +36,13 @@ const Projects = () => {
 
   return (
     <Paper className={classes.paper}>
-      <h2 className="sub-heading">PROJECTS</h2>
+      <Typography variant="h4">Projects</Typography>
       <Grid
         container
         direction="row"
         justify="center"
         alignItems="stretch"
-        spacing={4}
+        spacing={8}
       >
         {projectDetails.map((project) => (
           <Grid item style={{ display: "flex" }}>

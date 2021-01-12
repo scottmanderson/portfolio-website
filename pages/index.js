@@ -7,7 +7,7 @@ import Main from "../src/components/Main";
 
 export default function Index() {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg" justify="center">
       <Box my={4}>
         <Main />
       </Box>

@@ -22,6 +22,11 @@ const theme = createMuiTheme({
       secondary: "#000080",
     },
   },
+  typography: {
+    body1: {
+      fontSize: "1.125rem",
+    },
+  },
 });
 
 export default theme;

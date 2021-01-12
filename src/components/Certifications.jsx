@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Divider, Grid, Paper } from "@material-ui/core";
+import { Avatar, Divider, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import Image from "next/image";
 
@@ -19,7 +19,9 @@ const Certifications = () => {
   return (
     <Paper className={classes.paper}>
       <div className="container">
-        <h2 className="sub-heading">PROFESSIONAL CERTIFICATIONS</h2>
+        <Typography variant="h4" gutterBottom>
+          Professional Certifications
+        </Typography>
       </div>
       <Grid
         container
