@@ -93,6 +93,7 @@ const Technologies = () => {
         <TabList centered onChange={handleChange}>
           {techDetails.map((tech) => (
             <Tab
+              key={tech.name}
               value={tech.name}
               label={tech.name}
               icon={
@@ -107,7 +108,11 @@ const Technologies = () => {
           ))}
         </TabList>
         {techDetails.map((tech) => (
-          <TabPanel value={tech.name} className={styles.TabPanel}>
+          <TabPanel
+            key={tech.name}
+            value={tech.name}
+            className={styles.TabPanel}
+          >
             <Card className={styles.Card}>
               <Typography variant="h5" gutterBottom>
                 {tech.name}

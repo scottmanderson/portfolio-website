@@ -45,7 +45,7 @@ const Projects = () => {
         spacing={8}
       >
         {projectDetails.map((project) => (
-          <Grid item style={{ display: "flex" }}>
+          <Grid item key={project.name} style={{ display: "flex" }}>
             <Project details={project} />
           </Grid>
         ))}
