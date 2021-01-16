@@ -4,13 +4,9 @@ import { makeStyles } from "@material-ui/core";
 import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    overflow: "hidden",
-    paddingTop: 10,
-  },
   paper: {
     padding: theme.spacing(2),
+    textAlign: "center",
   },
 }));
 

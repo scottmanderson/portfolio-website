@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     paddingTop: 10,
     paddingBottom: 20,
+    textAlign: "center",
   },
 }));
 

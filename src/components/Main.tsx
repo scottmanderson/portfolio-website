@@ -7,7 +7,7 @@ import Technologies from "./Technologies";
 
 const Main = () => {
   return (
-    <Grid container direction="column" align="center" spacing={4}>
+    <Grid container direction="column" justify="center" spacing={4}>
       <Grid item>
         <Personal />
       </Grid>

@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     paddingTop: 20,
     paddingBottom: 20,
+    textAlign: "center",
   },
   Card: {
     backgroundColor: "mintcream",
@@ -108,11 +109,7 @@ const Technologies = () => {
           ))}
         </TabList>
         {techDetails.map((tech) => (
-          <TabPanel
-            key={tech.name}
-            value={tech.name}
-            className={styles.TabPanel}
-          >
+          <TabPanel key={tech.name} value={tech.name}>
             <Card className={styles.Card}>
               <Typography variant="h5" gutterBottom>
                 {tech.name}
