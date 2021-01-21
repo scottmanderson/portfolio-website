@@ -20,8 +20,7 @@ const Personal = () => {
         Scott Anderson
       </Typography>
       <Typography variant="h5" gutterBottom>
-        Lifelong learner moving from the investment industry to full stack web
-        development.
+        Self-taught software developer with a history in investment research.
         <br />
         See my resume for the path I took to get here.
       </Typography>

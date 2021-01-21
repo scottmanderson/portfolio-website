@@ -9,7 +9,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const projectDetails = [
+interface Project {
+  name: string;
+  description: string;
+  githubLink: string;
+  exampleLink: string;
+}
+
+const projectDetails: Project[] = [
   {
     name: "Minerva",
     description:

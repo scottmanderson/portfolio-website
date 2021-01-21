@@ -27,14 +27,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const techDetails = [
+interface Tech {
+  name: string;
+  image: string;
+  comments: string;
+}
+
+const techDetails: Tech[] = [
   {
     name: "React",
     image: "/React.png",
     comments:
       "I wanted to use a frontend framework within the Minerva project to provide dynamic page interactions to the user.  " +
       "In the past I have tried out Angular, React, and Vue for simple app building, and I decided to go with React as I preferred the one-way data binding approach.  " +
-      "Also, this website is built with Next.js, a static site generator for React which also has server side rendering capabilities (not presently in use here).",
+      "Also, this website is built with Next.js, a static site generator and server side rendering framework for React.",
   },
   {
     name: "Redux",
@@ -59,7 +65,7 @@ const techDetails = [
     name: "PostgreSQL",
     image: "/PostgreSQL.png",
     comments:
-      "I suppose any modern, free relational database would have worked reasonably well for these purposes, but I already had familiarity with PostgreSQL command line tools.",
+      "I decided to us PostreSQL on the backend for the minerva financial project as financial data is customarily stored in a relational database, and PostgreSQL provides a good mix of features, flexibility, and free pricing.",
   },
   {
     name: "Nodejs",
@@ -72,6 +78,12 @@ const techDetails = [
     image: "/MongoDB.png",
     comments:
       "MongoDB is a great choice for a lightweight project where the developer might change the desired schema frequently.",
+  },
+  {
+    name: "Docker",
+    image: "/Docker.png",
+    comments:
+      "Docker, and particularly docker-compose, made configuring and deploying these web environments far easier and more flexible than they otherwise would have been.",
   },
 ];
 
@@ -100,7 +112,7 @@ const Technologies = () => {
               icon={
                 <Image
                   alt={tech.name}
-                  src={"/images/techs" + tech.image}
+                  src={techImagePath + tech.image}
                   height="72"
                   width="72"
                 />
