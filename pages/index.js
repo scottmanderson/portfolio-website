@@ -10,6 +10,7 @@ export default function Index() {
     <div>
       <Head>
         <title>Scott Anderson</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxWidth="lg" justify="center">
         <Box my={4}>
