@@ -100,7 +100,7 @@ const Technologies = () => {
   return (
     <Paper className={styles.root}>
       <Typography variant="h4" gutterBottom>
-        Technologies Used In Projects
+        Project Technologies
       </Typography>
       <TabContext value={selectedName}>
         <TabList centered onChange={handleChange}>

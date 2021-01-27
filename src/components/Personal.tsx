@@ -19,13 +19,19 @@ const Personal = () => {
       <Typography variant="h2" gutterBottom>
         Scott Anderson
       </Typography>
-      <Typography variant="h5" gutterBottom>
-        Self-taught software developer with a history in investment research.
-        <br />
-        See my resume for the path I took to get here.
+      <Typography variant="h4" gutterBottom>
+        Self-taught software developer
       </Typography>
-      <br />
+      <Typography variant="h5" gutterBottom>
+        My previous background is a multi-disciplinary role in the institutional
+        investment consulting industry.
+      </Typography>{" "}
+      <Typography variant="h5" gutterBottom>
+        See my resume for the relevant skills I have acquired and contact
+        information.
+      </Typography>
       <Button
+        style={{ marginTop: 10 }}
         variant="contained"
         color="primary"
         endIcon={<CloudDownloadOutlinedIcon />}
