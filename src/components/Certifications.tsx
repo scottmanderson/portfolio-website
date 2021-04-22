@@ -36,6 +36,13 @@ const Certifications = () => {
         </Grid>
         <Grid item>
           <Image
+            src="/images/certs/Confluent-Developer.png"
+            height="250"
+            width="250"
+          />
+        </Grid>
+        <Grid item>
+          <Image
             src="/images/certs/AWS-Developer-Associate-2020.png"
             height="250"
             width="250"
