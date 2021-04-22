@@ -26,8 +26,8 @@ const Personal = () => {
         investment consulting industry.
       </Typography>{" "}
       <Typography variant="h5" gutterBottom>
-        I have focused my learning on Full Stack Web Development and Data
-        Engineering skills.
+        I have focused my recent learning on full stack web development and data
+        engineering skills.
       </Typography>
       <Typography variant="h5" gutterBottom>
         See my resume for details and contact information.
