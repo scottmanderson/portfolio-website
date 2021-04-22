@@ -6,8 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     overflow: "hidden",
-    paddingTop: 10,
-    paddingBottom: 20,
+    padding: 20,
     textAlign: "center",
   },
 }));
@@ -27,11 +26,14 @@ const Personal = () => {
         investment consulting industry.
       </Typography>{" "}
       <Typography variant="h5" gutterBottom>
-        See my resume for the relevant skills I have acquired and contact
-        information.
+        I have focused my learning on Full Stack Web Development and Data
+        Engineering skills.
+      </Typography>
+      <Typography variant="h5" gutterBottom>
+        See my resume for details and contact information.
       </Typography>
       <Button
-        style={{ marginTop: 10 }}
+        style={{ margin: 20 }}
         variant="contained"
         color="primary"
         endIcon={<CloudDownloadOutlinedIcon />}
@@ -39,7 +41,6 @@ const Personal = () => {
       >
         Download Resume
       </Button>
-      <br />
     </Paper>
   );
 };

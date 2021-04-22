@@ -79,12 +79,6 @@ const techDetails: Tech[] = [
     comments:
       "MongoDB is a great choice for a lightweight project where the developer might change the desired schema frequently.",
   },
-  {
-    name: "Docker",
-    image: "/Docker.png",
-    comments:
-      "Docker, and particularly docker-compose, made configuring and deploying these web environments far easier and more flexible than they otherwise would have been.",
-  },
 ];
 
 const Technologies = () => {

@@ -7,7 +7,7 @@ import Technologies from "./Technologies";
 
 const Main = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       <Grid
         container
         direction="column"
@@ -15,16 +15,16 @@ const Main = () => {
         alignContent="center"
         spacing={4}
       >
-        <Grid item>
+        <Grid item xs>
           <Personal />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <Projects />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <Technologies />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <Certifications />
         </Grid>
       </Grid>
